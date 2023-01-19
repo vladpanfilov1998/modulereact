@@ -1,19 +1,13 @@
-import {Route, Routes} from "react-router-dom";
+import React from 'react';
 
-import Layout from "./components/Layout/Layout";
-import EpisodesPage from "./pages/EpisodesPage/EpisodesPage";
-import SingleEpisodePage from "./pages/SinglePage/SingleEpisodePage";
+import Launches from "./components/Launches/Launches";
 
-
-function App() {
-  return (
-      <Routes>
-        <Route path={'/'} element={<Layout/>}>
-          <Route index element={<EpisodesPage/>}/>
-          <Route path={':id'} element={<SingleEpisodePage/>}/>
-        </Route>
-      </Routes>
-  );
-}
+const App = () => {
+    return (
+        <div>
+            <Launches/>
+        </div>
+    );
+};
 
 export default App;
